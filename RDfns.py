@@ -58,7 +58,7 @@ def update_both(A, B, laplace_kernel, D_A = 1, D_B = 0.5, f = 0.055, k = 0.062, 
 
 ## run the simulation for n time-steps
 ## not sure how this incorporates at the moment. 
-def update_n(A, B, laplace_kernel, D_A = 1, D_B = 0.5, f = 0.055, k = 0.062, t = 1, n_sim = 200, N = 100): 
+def update_n(A, B, laplace_kernel, D_A = 1, D_B = 0.5, f = 0.055, k = 0.062, t = 1, n_sim = 100, N = 100): 
     # empty list holding images.
     fig, ax = plt.subplots()
     ims = []
@@ -71,9 +71,11 @@ def update_n(A, B, laplace_kernel, D_A = 1, D_B = 0.5, f = 0.055, k = 0.062, t =
 
     return ims 
 
+'''
 ## update image function
 def updatefig(*args): 
     global A, B
     A, B = update_both(A, B)
     im.set_array(B)
     return im, # not sure about this comma. 
+'''

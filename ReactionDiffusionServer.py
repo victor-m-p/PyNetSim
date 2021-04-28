@@ -45,9 +45,19 @@ A, B = starting_mat()
 # run simulations 
 ims = update_n(A, B, laplace_kernel)
 
+# try to show them manually 
+for im in ims: 
+    print(im)
+
+
+'''
 # show animation
 ani = animation.ArtistAnimation(fig, ims, interval=200, blit=True,
                                 repeat_delay=1000)
 
-# plt show
-plt.show()
+# give it a title
+fig.suptitle('Reaction-Diffusion Simulation', fontsize=14)
+
+##### saving 
+ani.save(filename = "test.mp4", writer = animation.FFMpegWriter())
+'''
