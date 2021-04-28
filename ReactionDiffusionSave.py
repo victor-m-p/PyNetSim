@@ -78,5 +78,8 @@ ims = update_n2(A, B, laplace_kernel, t = t, n_sim = n_sim, N = N)
 ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
                                 repeat_delay=300)
 
+writervideo = animation.FFMpegWriter(fps=20)
+ani.save(filename = "anims/test3.mp4", writer=writervideo)
+
 # plt show
-plt.show()
+#plt.show()

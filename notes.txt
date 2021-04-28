@@ -1,0 +1,3 @@
+# notes
+1. ArtistAnimation less effective than FuncAnimation
+2. Better plotting options seem to be available.
