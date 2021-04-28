@@ -1,7 +1,9 @@
+# libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import math
+import sys
 
 ## import functions
 from RDfns import * # bad practise?
@@ -44,7 +46,18 @@ A, B = starting_mat()
 ims = update_n(A, B, laplace_kernel)
 
 # show animation
-ani = animation.ArtistAnimation(fig, ims, interval=200, blit=True, repeat_delay=1000)
+ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
+                                repeat_delay=1000)
 
-# show the plot
 plt.show()
+
+''' The animation.FuncAnimation paradigm
+
+# right now we are just plotting B 
+im = plt.imshow(B, animated = True)
+
+## run the animation
+ani = animation.FuncAnimation(fig, updatefig, interval=100, blit=True, repeat = False)
+plt.show()
+
+'''
