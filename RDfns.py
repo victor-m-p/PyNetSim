@@ -10,9 +10,12 @@ def starting_mat(N = 100):
     A = np.ones((N, N))
     B = np.zeros((N, N))
 
-    # then some tweaks 
+    # initialize some B 
     B[math.floor(N/10):math.floor(N/6), math.floor(N/10):math.floor(N/7)] = 1
     #B[math.floor(N/3):math.floor(N/2), math.floor(N/3):math.floor(N/2)] = 1
+
+    # the same for A
+    A[math.floor(N/10):math.floor(N/6), math.floor(N/10):math.floor(N/7)] = 0
 
     # return them both
     return A, B
